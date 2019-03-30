@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4EA0AF88-81FD-4139-A5E1-EA70058F1686}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WFLibrary</RootNamespace>
+    <AssemblyName>WFLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormCatalogAuthorBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCatalogAuthorBook.Designer.cs">
+      <DependentUpon>FormCatalogAuthorBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCatalogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCatalogs.Designer.cs">
+      <DependentUpon>FormCatalogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLibrary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLibrary.Designer.cs">
+      <DependentUpon>FormLibrary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReadersInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReadersInfo.Designer.cs">
+      <DependentUpon>FormReadersInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCatalogAuthorBook.resx">
+      <DependentUpon>FormCatalogAuthorBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCatalogs.resx">
+      <DependentUpon>FormCatalogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLibrary.resx">
+      <DependentUpon>FormLibrary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReadersInfo.resx">
+      <DependentUpon>FormReadersInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+AuthorsDataTable.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+AuthorsRow.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+AuthorsRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+AuthorsRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+BooksDataTable.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+BooksRow.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+BooksRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+BooksRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Book_authorsDataTable.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Book_authorsRow.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Book_authorsRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Book_authorsRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Book_catalogsDataTable.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Book_catalogsRow.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Book_catalogsRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Book_catalogsRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Book_copiesDataTable.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Book_copiesRow.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Book_copiesRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Book_copiesRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+CatalogsDataTable.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+CatalogsRow.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+CatalogsRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+CatalogsRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+ReadersDataTable.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+ReadersRow.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+ReadersRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+ReadersRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Reader_book_copiesDataTable.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Reader_book_copiesRow.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Reader_book_copiesRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary+Reader_book_copiesRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\LibraryData.DataSetLibrary.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryData\LibraryData.csproj">
+      <Project>{94ce49f7-1fae-4d1f-b52a-2d65f860dc52}</Project>
+      <Name>LibraryData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
